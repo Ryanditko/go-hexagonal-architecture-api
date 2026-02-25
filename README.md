@@ -1,4 +1,7 @@
 # Hexagonal Arch API
+<p align="center">
+  <img src="https://dkrn4sk0rn31v.cloudfront.net/uploads/2022/10/o-que-e-e-como-comecar-com-golang.jpg" alt="Go API" width="800">
+</p>
 
 A modern REST API built with Go, following clean architecture principles and best practices.
 

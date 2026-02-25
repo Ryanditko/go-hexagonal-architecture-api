@@ -1,8 +1,8 @@
-# Go REST API
+# Hexagonal Arch API
 
 A modern REST API built with Go, following clean architecture principles and best practices.
 
-## 🚀 Features
+## Features
 
 - **Clean Architecture**: Well-structured codebase with clear separation of concerns
 - **RESTful API**: Complete CRUD operations for users
@@ -14,36 +14,21 @@ A modern REST API built with Go, following clean architecture principles and bes
 - **Error Handling**: Comprehensive error handling with meaningful responses
 - **Pagination**: Built-in pagination support for list endpoints
 
-## 🏗️ Architecture
+## Architecture
 
-This project follows the **Clean Architecture** pattern:
+This project follows the **Clean Architecture** pattern    
 
+# Docker services
 ```
-cmd/
-├── main.go                 # Application entry point
-
-internal/
-├── config/                 # Configuration management
-├── domain/                 # Business entities and models
-├── handlers/              # HTTP handlers (controllers)
-├── middleware/            # HTTP middleware
-├── repository/            # Data access layer
-└── service/               # Business logic layer
-
-pkg/
-└── database/              # Database connection and utilities
-
-migrations/                # Database migrations
-docker-compose.yml         # Docker services
+r-compose.yml     
 ```
-
-## 📋 Prerequisites
+## Prerequisites
 
 - **Go** 1.21 or higher
 - **Docker** and **Docker Compose**
 - **PostgreSQL** (or use Docker)
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -73,7 +58,7 @@ docker-compose.yml         # Docker services
 
 The API will be available at `http://localhost:8080`
 
-## 🔧 Configuration
+## Configuration
 
 The application uses environment variables for configuration. Create a `.env` file in the root directory:
 
@@ -91,7 +76,7 @@ SERVER_PORT=8080
 ENV=development
 ```
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Health Check
 - `GET /health` - Check API health status
@@ -103,7 +88,7 @@ ENV=development
 - `PUT /api/v1/users/{id}` - Update user
 - `DELETE /api/v1/users/{id}` - Delete user
 
-## 📖 API Documentation
+## API Documentation
 
 ### Create User
 ```http
@@ -175,7 +160,7 @@ Content-Type: application/json
 DELETE /api/v1/users/{id}
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Manual Testing with curl
 
@@ -208,7 +193,7 @@ DELETE /api/v1/users/{id}
    curl -X DELETE http://localhost:8080/api/v1/users/{user-id}
    ```
 
-## 🐳 Docker
+## Docker
 
 ### Database Only
 ```bash
@@ -234,7 +219,7 @@ COPY --from=builder /app/main .
 CMD ["./main"]
 ```
 
-## 🔍 Error Handling
+## Error Handling
 
 The API returns consistent error responses:
 
@@ -252,7 +237,7 @@ Common error codes:
 - `user_exists` - User already exists (email conflict)
 - `internal_error` - Server error
 
-## 🔒 Best Practices Implemented
+## Best Practices Implemented
 
 1. **Clean Architecture**: Separation of concerns with clear layers
 2. **Dependency Injection**: Loose coupling between components
@@ -265,7 +250,7 @@ Common error codes:
 9. **UUID**: Using UUIDs for primary keys for better security
 10. **Pagination**: Built-in pagination support
 
-## 🚧 Development
+## Development
 
 ### Project Structure Explanation
 
@@ -289,11 +274,11 @@ Common error codes:
 5. Add routes in `internal/handlers/routes.go`
 6. Update database migrations if needed
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -301,10 +286,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📞 Support
+## Support
 
 If you have any questions or need help, please open an issue in the repository.
 
 ---
-
-**Happy Coding! 🎉**

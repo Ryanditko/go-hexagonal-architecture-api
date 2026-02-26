@@ -1,4 +1,5 @@
-# Hexagonal Arch API
+# Golang Clean Architecture API
+
 <p align="center">
   <img src="https://dkrn4sk0rn31v.cloudfront.net/uploads/2022/10/o-que-e-e-como-comecar-com-golang.jpg" alt="Go API" width="800">
 </p>
